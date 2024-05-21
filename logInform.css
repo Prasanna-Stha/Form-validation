@@ -1,0 +1,225 @@
+:root{
+    --blue: #023977;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.containerBox{
+    width: 100vw;
+    height: 100vh;
+}
+::-webkit-scrollbar {
+    width: .2px;
+  }
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 20px;
+    
+}  
+.downArrow{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50%;
+}
+.formBox, .signUpBox{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.parentBox{
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    /* overflow-y: hidden; */
+}
+.logo{
+    width: 100%;
+    height: 200px;
+    background-color: var(--blue);
+    transform: 1s ease;
+}
+.logo .logoImg{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+.logoImg img{
+    width: 200px;
+    height: 200px;
+}
+.logInBox, .signUpForm{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 50px;
+}
+.logInTitle, .signUpTitle{
+    width: 100%;
+    height: fit-content;
+}
+.logInTitle h3, .signUpTitle h3{
+    position: relative;
+    padding: 15px;
+    margin: 15px 0 30px;
+    top: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+.form, .signUpForm{
+    width: 100%;
+}
+.inputBox{
+    width: 90%;
+    margin: auto;
+}
+.inputBox input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(32, 30, 30);
+    margin: 5px 0;
+    padding: 5px;
+}
+.inputBoxDescription{
+    position: relative;
+    top: 30px;
+    left: 5px;
+    font-size: 14px;
+    color: black;
+    opacity: .8;
+    transition: .1s linear;
+}
+.submitBtn{
+    width: 90%;
+    margin: 15px auto;
+}
+.submitBtn input{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+}
+.forgotPass{
+    width: 95%;
+    text-align: right;
+    margin: 10px;
+}
+.forgotPass a{
+    text-decoration: none;
+    color: black;
+    opacity: .9;
+    font-size: 14px;
+}
+.signUpBtn{                    /* reDirect button for signUp page */
+    width: 90%;
+    padding-bottom: 20px;
+    margin: 10vh auto 10px;
+}
+.signUpBtn input{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid var(--blue);
+    color: black;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signUpBtn input:hover{
+    background-color: var(--blue);
+    color: white;
+    transition: .1s linear;
+}
+.signUpBtn p{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.signUpForm, .signUpTitle {
+    display: none;
+}
+
+.logInRedirect{       /* logIn redirect button for login page */
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+.logInRedirect a{
+    color: var(--blue);
+}
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    body{
+        background-color: white;
+    }
+    .formBox{
+        width: 80%;
+        height: fit-content;
+        box-shadow: grey .5px .5px 20px .5px;
+    }
+    .logo{
+        width: 100%;
+        background-color: var(--blue);
+        margin: auto;
+    }
+    .logInBox{
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px){                /* side by side view of logo and form */
+    .parentBox{
+        display: flex;
+        width: 70%;
+        height: fit-content;                
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        box-shadow: grey .5px .5px 20px .5px
+    }
+    .logo{
+        width: 90%;
+    }
+    .formBox{
+        box-shadow: grey .5px .5px 20px .5px;
+        border-radius: 10px;
+    }
+    .signUpBtn{
+        margin: 50px auto 10px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .parentBox{
+        display: 50%;
+        display: flex;
+    }
+    .logo{
+        width: 90%;
+    }
+    .formBox{
+        width: 50%;
+        height: fit-content;
+        box-shadow: grey .5px .5px 20px .5px;
+        border-radius: 10px;
+    }
+} 

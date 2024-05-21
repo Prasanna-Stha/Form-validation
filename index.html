@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker- logIn</title>
+    <link rel="stylesheet" href="logInform.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="containerBox">
+        <div class="formBox">
+            <div class="parentBox">
+                <div class="logo">
+                    <div class="logoImg">
+                        <img src="logo1.png" alt="logo">
+                    </div>
+                </div>
+                <div class="logInBox">
+                    <div class="logInTitle">
+                        <h3>Log In</h3>
+                    </div>
+                    <div class="form">
+                        <form action="#" method="post" onsubmit="formValidate(e)">
+                            <!-- user should enter userName for logIn, not email id -->
+                            <div class="userName inputBox">
+                                <label for="userName" class="inputBoxDescription">User name</label>
+                                <input type="text" name="userName" id="targetUserName" class="inputField" autocomplete="off" required>
+                            </div>
+                            <!-- passwordBox -->
+                            <div class="password inputBox">
+                                <label for="password" class="inputBoxDescription">Password</label>
+                                <input type="password" name="password" class="inputField" autocomplete="off" required>
+                            </div>
+
+                            <div class="forgotPass">
+                                <a href="#">forgot password?</a>
+                            </div>
+                            <!-- signIn button -->
+                            <div class="submitBtn button">
+                                <input type="submit" name="loginForm" value="Log In">
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- onclick, this will redirect user to signUp form interface -->
+                    <div class="signUpBtn button">
+                        <p>Don't have an account?</p>
+                        <input type="button" name="loginForm" value="Create new account">
+                    </div>
+
+                    <!-- signup form here -->
+                    <div class="signUpTitle">
+                        <h3>Create account</h3>
+                    </div>
+                    <div class="signUpForm">
+                        <form action="#" method="post">
+                            <!-- first Name box(mandatory) -->
+                            <div class="firstName inputBox">
+                                <label for="firstName" class="inputBoxDescription fName">First name</label>
+                                <input type="text" name="firstName" class="inputField fName" autocomplete="off" required>
+                            </div>
+                            <!-- middle name box(optional) -->
+                            <div class="middleName inputBox">
+                                <label for="middleName" class="inputBoxDescription">Middle name</label>
+                                <input type="text" name="middleName" class="inputField mName" autocomplete="off">
+                            </div>
+                            <!-- last name box(mandatory) -->
+                            <div class="lastName inputBox">
+                                <label for="lastName" class="inputBoxDescription">Last name</label>
+                                <input type="text" name="lastName" class="inputField lName" autocomplete="off" required>
+                            </div>
+                            <!-- email box(mandatory) -->
+                            <div class="email inputBox">
+                                <label for="emailId" class="inputBoxDescription">Email</label>
+                                <input type="email" name="emailId" class="inputField emailBox" autocomplete="off" required>
+                            </div>
+                            <!-- userName box(mandatory), each account should have different userName -->
+                            <div class="userName inputBox">
+                                <label for="userName" class="inputBoxDescription">User name</label>
+                                <input type="text" name="userName" class="inputField" autocomplete="off" required>
+                            </div>
+                            <!-- password box(mandatory) -->
+                            <div class="password inputBox">
+                                <label for="password" class="inputBoxDescription">Password</label>
+                                <input type="password" name="password" class="inputField" autocomplete="off" required>
+                            </div>
+                            <!-- signUp button -->
+                            <div class="submitBtn button">
+                                <input type="submit" name="signUpForm" value="Create account">
+                            </div>
+                        </form>
+                        <div class="logInRedirect">
+                            <span>Already have an account? </span>
+                            <a href="#">log In</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script src="./script.js"></script>
+            <script>
+                function formValidate(e) {
+                    e.preventDefault();
+                    let userName = document.getElementById('targetUserName').value;
+                    if (userName.length <= 3) {
+                        document.getElementById('targetUserName').innerText = "Please enter more charaters!";
+                        return;
+                    }
+                }
+            </script>
+</body>
+
+</html>
